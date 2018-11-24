@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+
+import serial
+import pymongo
+import datetime
+import time
+from time import sleep
+
+uri = 'mongodb://jaya:Jayakumar1@ds247310.mlab.com:47310/junction' 
+client = pymongo.MongoClient(uri)
+db = client.get_default_database()
+upstreamPosts = db['users']
+
+
+def notify_server(msg):
+
+	print(msg)
+	time = datetime.datetime.now()
+
+	components = msg.split()
+	upstreamPosts.insert_one({"deviceId": components[0], "message": msg, "time": time.strftime("%I:%M %p"), "location": "Hub 1"})
+
+if __name__ == '__main__':
+	while True:
+		for i in range(0,10):
+			try:
+				ser = serial.Serial('/dev/ttyACM{0}'.format(i), timeout=1)
+				ser.baudrate = 115200
+				break
+			except Exception as e:
+				# print(e)
+				continue
+		else:
+			print("No port found")
+			sleep(2)
+			continue
+
+		try:
+			while ser.is_open:
+				line = ser.readline().decode("utf-8")
+				if line.startswith("#EMERG:"):
+					
+					notify_server(line[7:])
+
+				# print(line)
+		except serial.serialutil.SerialException as e:
+			print("Device is lost")
+			continue
+
