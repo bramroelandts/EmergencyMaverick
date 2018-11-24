@@ -1,0 +1,84 @@
+.dashboard {
+  height: 100%;
+  background-color: #deded1;
+}
+
+.Title {
+  display: grid;
+  justify-content: center;
+  color: #04183c;
+}
+.subtitle {
+  margin: 20px 50px;
+  text-align: center;
+  color: #d16900;
+}
+.back {
+  color: blue;
+  margin: 10px 30px;
+  font-size: 20px;
+}
+.Emergency {
+  color: rgb(70, 69, 69);
+  font-size: 20px;
+  font-weight: bold;
+}
+.displayData {
+  margin-top: 10px;
+  height: 300px;
+  width: 100vw;
+  /* overflow-x: hidden; */
+  /* overflow-y: auto; */
+}
+.data {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: 100px;
+}
+.data-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(70, 94, 70);
+}
+.message {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.form {
+  display: grid;
+}
+.message-area {
+  margin-left: 80px;
+  height: 90px;
+  width: 85%;
+}
+.submit {
+  height: 40px;
+  width: 80px;
+  margin-left: 80px;
+  margin-top: 25px;
+  border: none;
+  background-color: rgb(171, 171, 209);
+  color: white;
+}
+.table {
+  height: 200px;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.TitleAndButton {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.loading {
+  margin-top: 80px;
+  text-align: center;
+}

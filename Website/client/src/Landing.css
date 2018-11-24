@@ -1,0 +1,64 @@
+.landing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.demoSection {
+  display: grid;
+  justify-content: center;
+  vertical-align: center;
+}
+.demoSection::after {
+  content: "";
+  background-image: url("./images/trees.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.demo {
+  justify-self: center;
+  align-self: center;
+  color: rgb(243, 148, 7);
+}
+.useCasesSection {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  display: grid;
+  position: relative;
+}
+.useCasesSection::after {
+  content: "";
+  background-image: url("./images/greenery.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.useCases {
+  justify-self: center;
+  align-self: center;
+  color: black;
+}
+.demo-subTitle a {
+  text-align: center;
+  color: black;
+  font-size: 80px;
+}
+.sub-title {
+  text-align: center;
+  font-size: 25px;
+
+  color: rgb(59, 59, 59);
+}

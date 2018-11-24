@@ -1,0 +1,20 @@
+.useCaseTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-left: 25px;
+}
+
+.back-button-usecase {
+  height: 40px;
+  width: 70px;
+  border: none;
+  background-color: aquamarine;
+  color: blue;
+  margin: 10px 30px;
+}
+.slide1,
+.slide3,
+.slide5 {
+  margin-left: 30px;
+}
