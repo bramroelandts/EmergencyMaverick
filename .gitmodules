@@ -1,0 +1,4 @@
+[submodule "BluetoothMessenger"]
+	path = BluetoothMessenger
+	url = https://github.com/klokik/BluetoothMessenger.git
+	branch = junction
